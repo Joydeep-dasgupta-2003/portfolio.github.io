@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,23 +9,30 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/c976672c8d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- home section  -->
     <div id="header">
         <div class="container">
             <nav>
                 <img src="JOY.png" class="logo">
-                <ul id="sidemenu"><!--errorr on  openmenu-->
+                <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#portfolio">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>                
-            </nav><!--errorr on openmenu-->
-            <div class ="header-text">
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
                 <p>Web Developer</p>
                 <h1>Hi,I'm <span>Joydeep</span></h1>
             </div>
@@ -44,24 +52,25 @@
                         and Change in my life. After achieving it, I believe the
                         next opportunity would be to deliver value back to the
                         organization.</p>
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                            <p class="tab-links"onclick="opentab('Education')">Education</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="Skills">
-                            <ul>
-                                <li><span>Web Designing</span><br>Web Interface Designing</li>
-                                <li><span>Web Development</span><br>Making websites</li>
-                                <li><span>Java Developer</span><br>Making Android apps</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="Education">
-                            <ul>
-                                <li><span>2020</span><br>Passed MP With A Grade Marks</li>
-                                <li><span>2022</span><br>Passed HS with A+ Grade Marks<li>                     
-                                <li><span>2022</span><br>Pursuring BCA In Brainware University</li>
-                            </ul>
-                        </div>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Web Designing</span><br>Web Interface Designing</li>
+                            <li><span>Web Development</span><br>Making websites</li>
+                            <li><span>Java Developer</span><br>Making Android apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2020</span><br>Passed MP With A Grade Marks</li>
+                            <li><span>2022</span><br>Passed HS with A+ Grade Marks
+                            <li>
+                            <li><span>2022</span><br>Pursuring BCA In Brainware University</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -96,7 +105,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#"class="btn">See More </a>
+            <a href="#" class="btn">See More </a>
         </div>
     </div>
     <!-- contact information -->
@@ -114,8 +123,8 @@
                     <a href="Joy's Resume.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form >
-                        <input type="text" name ="Name" placeholder="Your Name" required>
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="Massage" rows="6" placeholder="Your Massage"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
@@ -149,4 +158,5 @@
 
 
 </body>
+
 </html>
