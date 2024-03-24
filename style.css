@@ -4,6 +4,16 @@
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color:  #2f2fa2;
+}
+::-webkit-scrollbar-thumb{
+    background-color:#ecdf24 ;
+    border-radius: 10px;
+}
 
 html {
     scroll-behavior: smooth;
@@ -454,6 +464,7 @@ nav .fa-solid {
     .contact-left,
     .contact-right {
         flex-basis: 100%;
+        text-align: center;
     }
 
     .copyright {
