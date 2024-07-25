@@ -10,23 +10,6 @@ function opentab(tabname){
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 }
-// <!--errorr-->
-// var sidemenu = document.getElementById("sidemenu"); // fixed ID here
-//     function openmenu() {
-//         if (sidemenu) {
-//             sidemenu.style.right = '0';
-//         } else {
-//             console.error("Element with ID 'sidemenu' not found."); // fixed ID here
-//         }
-//     }
-//     function closemenu() {
-//         if (sidemenu) {
-//             sidemenu.style.right = "-200px";
-//         } else {
-//             console.error("Element with ID 'sidemenu' not found."); // fixed ID here
-//         }
-//     }
-// <!--errorr-->
 function openmenu() {
     document.getElementById("sidemenu").style.width = "200px";
   }
@@ -34,3 +17,13 @@ function openmenu() {
   function closemenu() {
     document.getElementById("sidemenu").style.width = "0";
   }
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const certCards = document.querySelectorAll('.cert-card');
+
+    certCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.2}s`; // Stagger animations for a cascading effect
+    });
+});
