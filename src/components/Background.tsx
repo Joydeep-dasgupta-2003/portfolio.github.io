@@ -1,8 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 export function Background() {
+    const isMobile = useMediaQuery("(max-width: 768px)");
+
+    if (isMobile) {
+        return (
+            <div className="fixed inset-0 -z-10 overflow-hidden bg-[#050505]">
+                <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay pointer-events-none"></div>
+                <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px]" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px]" />
+            </div>
+        );
+    }
+
     return (
         <div className="fixed inset-0 -z-10 overflow-hidden bg-[#050505]">
             <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay pointer-events-none"></div>

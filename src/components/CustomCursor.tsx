@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 export function CustomCursor() {
     const [isHovered, setIsHovered] = useState(false);
+    const isMobile = useMediaQuery("(max-width: 768px) or (hover: none) and (pointer: coarse)");
     const cursorX = useMotionValue(-100);
     const cursorY = useMotionValue(-100);
 
@@ -33,11 +35,12 @@ export function CustomCursor() {
         return () => {
             window.removeEventListener("mousemove", moveCursor);
             interactiveElements.forEach((el) => {
-                el.removeEventListener("mouseenter", handleHoverStart);
                 el.removeEventListener("mouseleave", handleHoverEnd);
             });
         };
-    }, [cursorX, cursorY]);
+    }, [cursorX, cursorY, isMobile]);
+
+    if (isMobile) return null;
 
     return (
         <motion.div
